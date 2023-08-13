@@ -1,5 +1,8 @@
 #!/usr/bin/python3
-
+"""
+function that returns the munimum number 
+of operation srequired to perform an operation
+"""
 
 def minOperations(n):
     if n <= 1:
