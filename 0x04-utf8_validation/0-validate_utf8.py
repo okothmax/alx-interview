@@ -4,12 +4,15 @@
 
 def validUTF8(data):
     """
-    Function to ascertain the validity of a provided dataset as a UTF-8 encoding.
-    Result: Returns True if the dataset is a valid UTF-8 encoding; otherwise, it returns False.
+    Function to ascertain the validity of a provided dataset as
+    a UTF-8 encoding.
+    Result: Returns True if the dataset is a valid UTF-8 encoding;
+    otherwise, it returns False.
     In UTF-8, a character's length ranges from 1 to 4 bytes.
     The dataset can encompass numerous characters.
     Representation of the dataset is through a list of integers.
-    Each integer signifies 1 byte of data; consequently, only the least significant 8 bits of each integer necessitate handling.
+    Each integer signifies 1 byte of data; consequently, only the
+    least significant 8 bits of each integer necessitate handling.
     """
     # Variable for counting number of bytes in UTF-8 Character
     number_bytes = 0
@@ -44,7 +47,7 @@ def validUTF8(data):
             # Every byte that is not the first byte of a character should start
             # with 10, otherwise is not valid
             if not (i & mask1 and not (i & mask2)):
-                    return False
+                return False
 
         # If bytes of character are valid, then the count will decrease with
         # each byte until a new character starts
