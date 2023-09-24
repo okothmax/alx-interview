@@ -9,7 +9,7 @@ it's feasible to unlock all the boxes.
 """
 
 
-def canUnlockAll(boxes):
+def canUnlockAll(boxes: list) -> bool:
     """
     A function that employs a boolean value to determine whether
       the type and length of a list warrant the
@@ -35,3 +35,8 @@ def canUnlockAll(boxes):
                 keys_stack.append(key)
 
     return all(unlocked_boxes)
+
+
+if __name__ == "__main__":
+    boxes = [[1], [2], [3], [4], []]
+    print(canUnlockAll(boxes))
